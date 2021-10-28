@@ -921,13 +921,13 @@
                         <!-- Contact Details -->
                         <div class="container p-4 details">
 
-                            <input type="hidden" name="origin_url" value="https://local.londonboilerservices.com/">
+                            <!-- <input type="hidden" name="origin_url" value="https://local.londonboilerservices.com/"> -->
                             <input type="hidden" name="ip" value="" id="ip">
                             <input type="hidden" name="cid" value="45346" id="cid">
                             <input type="hidden" name="fran_label" value="-">
                             <input type="hidden" name="fran_email" value="-">
-                            <input type="hidden" name="url_end_point"
-                                value="https://form.esales-hub.com/e_endpoint.php">
+                            <!-- <input type="hidden" name="url_end_point"
+                                value="https://form.esales-hub.com/e_endpoint.php"> -->
                             <input type="hidden" name="Location" value="" id="Location" class="Location_value">
                             <input type="hidden" name="fran_label" value="" id="fran_label" class="fran_label_value">
                             <input type="hidden" name="Service" value="" id="Service" class="Service_value">
@@ -1041,8 +1041,7 @@
                                     <div class="row">
                                         <div class="col-md-10 offset-2-custom">
                                             <div class="boiler_image">
-                                                <img src="https://local.londonboilerservices.com/images/boiler_cutout.png"
-                                                    class="img-fluid">
+                                                <img src="./images/SignUp Images/boiler_cutout.png" class="img-fluid">
                                             </div>
                                             <div class="inner">
                                                 <div class="row">
@@ -1088,7 +1087,7 @@
                                     <div class="row">
                                         <div class="col-md-10 offset-2-custom">
                                             <div class="boiler_image2">
-                                                <img src="https://local.londonboilerservices.com/images/boiler_cutout_valliant.png"
+                                                <img src="./images/SignUp Images/boiler_cutout_valliant.png"
                                                     class="img-fluid">
                                             </div>
                                             <div class="inner">
@@ -1135,7 +1134,7 @@
                                     <div class="row">
                                         <div class="col-md-10 offset-2-custom">
                                             <div class="boiler_image3">
-                                                <img src="https://local.londonboilerservices.com/images/boiler_cutout_worcester.png"
+                                                <img src="./images/SignUp Images/boiler_cutout_worcester.png"
                                                     class="img-fluid">
                                             </div>
                                             <div class="inner">
@@ -1560,7 +1559,7 @@
             $('#f_step_8').show();
         });
 
-        //Base setting ***if not pass value home to signup please delete this section.
+        //base setting ***if not pass value home to signup please delete this section
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         //end base setting---------------------------------
@@ -1603,6 +1602,7 @@
         });
         //end set header menu -----------------------------------
         var final_ammouunt = 0;
+
 
         $('#btnSubmit').click(function (event) {
 
@@ -1654,36 +1654,39 @@
             $('input, textarea').not('input[type="submit"]').each(function (index, el) {
                 data[$(this).attr('name')] = $(this).val();
             });
+
+            // Commented data
+            // if (validate) {
+            //     var url = window.location.href;
+            //     var url_domain = "https://local.londonboilerservices.com/";
+            //     $.ajax({
+            //         url: 'https://alp.esales-hub.com/api_submit',
+            //         type: 'POST',
+            //         dataType: 'JSON',
+            //         data: {
+            //             data: data,
+            //             url: url,
+            //             url_domain: url_domain,
+            //             email: $('input[type="email"]').val()
+            //         }
+            //     })
+            //         .done(function (obj) {
+            //             //you can change token page type you want to redirect
+
+            //             // console.log(data);
+
+            //             //console.log(encoded);
+            //             window.location.assign('https://local.londonboilerservices.com/thank_you' + "?quote=" + encoded);
+            //         })
+            // } else {
+            //     $("#frmData")[0].reportValidity()
+            //     return false;
+            // }
+            // Commented data
+
+
             /*
-            if (validate) {
-                var url = window.location.href;
-                var url_domain = "https://local.londonboilerservices.com/";
-                $.ajax({
-                    url: 'https://alp.esales-hub.com/api_submit',
-                    type: 'POST',
-                    dataType: 'JSON',
-                    data: {
-                        data: data,
-                        url: url,
-                        url_domain: url_domain,
-                        email: $('input[type="email"]').val()
-                    }
-                })
-                    .done(function (obj) {
-                        //you can change token page type you want to redirect
 
-                        // console.log(data);
-
-                        //console.log(encoded);
-                        window.location.assign('https://local.londonboilerservices.com/thank_you' + "?quote=" + encoded);
-                    })
-            } else {
-                $("#frmData")[0].reportValidity()
-                return false;
-            }
-
-            */
-            /*
                             var firstname = ($("input[name=firstname]").val());
 
                             var lastname = ($("input[name=lastname]").val());
